@@ -51,30 +51,20 @@ export function Header() {
         )}
       >
         <div 
-          className={cn(
-            "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 rounded-2xl",
-            isScrolled 
-              ? "bg-ink/80 backdrop-blur-xl border border-parchment/10 shadow-2xl px-6 py-3" 
-              : "bg-transparent border-transparent px-2"
-          )}
+          className="max-w-7xl mx-auto flex items-center justify-between px-2"
         >
           {/* Logo Lockup */}
-          <Link href="/" className="group flex items-center gap-3.5 z-50">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-marigold to-orange-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <span className="font-display font-black text-base text-ink tracking-tighter">K26</span>
-            </div>
-            <div className="flex flex-col gap-0.5">
-              <span className="font-display text-xl sm:text-2xl font-bold leading-none tracking-wide text-parchment">
-                Kalaiyugam<span className="text-marigold">.</span>
-              </span>
-              <span className="text-xs uppercase tracking-[0.2em] text-parchment/60 font-sans">
-                The Celebration of Art
-              </span>
-            </div>
+          <Link href="/" className="group flex items-center z-50">
+            {/* The user will drop logo.png into the public folder */}
+            <img 
+              src="/logo.png" 
+              alt="Kalaiyugam Logo" 
+              className="h-20 md:h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_0_15px_rgba(217,164,65,0.4)]"
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-2">
+          <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-12 bg-ink/90 backdrop-blur-md border border-marigold/40 rounded-full px-12 py-5 shadow-2xl shadow-marigold/10">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -82,17 +72,15 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "relative px-4 py-2 font-sans text-sm font-medium transition-colors rounded-lg overflow-hidden group",
-                    isActive ? "text-marigold" : "text-parchment/70 hover:text-parchment"
+                    "relative py-1 font-sans text-sm font-semibold uppercase tracking-[0.25em] transition-colors group",
+                    isActive ? "text-marigold" : "text-marigold/70 hover:text-marigold"
                   )}
                 >
                   <span className="relative z-10">{link.name}</span>
-                  {/* Hover background effect */}
-                  <span className="absolute inset-0 bg-parchment/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-lg" />
                   {isActive && (
                     <motion.div 
                       layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-marigold rounded-t-full"
+                      className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-marigold"
                     />
                   )}
                 </Link>

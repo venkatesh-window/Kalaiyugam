@@ -29,8 +29,8 @@ const PillarBlock = ({ pillar, index }: { pillar: any, index: number }) => {
       </div>
 
       {/* Visual Block (Image or Icon) */}
-      <div className="flex-1 w-full max-w-md aspect-square relative group perspective rounded-lg overflow-hidden border border-parchment/10">
-        <div className="absolute inset-0 opacity-10 blur-3xl rounded-full bg-marigold transition-all duration-1000 group-hover:opacity-30" />
+      <div className="flex-1 w-full max-w-md aspect-square relative group perspective rounded-lg overflow-hidden border border-parchment/10 transition-shadow duration-500 hover:shadow-[0_0_40px_rgba(217,164,65,0.2)]">
+        <div className="absolute inset-0 opacity-10 blur-3xl rounded-full bg-marigold transition-all duration-1000 group-hover:opacity-40" />
         
         {pillar.image ? (
           <div 

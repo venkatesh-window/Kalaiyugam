@@ -55,12 +55,12 @@ export function AboutGallerySection() {
             className="space-y-8"
           >
             <motion.div variants={itemVariants}>
-              <h2 className="font-display text-4xl md:text-6xl uppercase tracking-wider text-parchment/90">
+              <h2 className="font-display text-5xl md:text-7xl uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-parchment to-parchment/70 leading-[1.1]">
                 Where tradition <br />
-                <span className="text-marigold">meets expression.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-marigold to-orange-400">meets expression.</span>
               </h2>
               {/* Decorative arc/rule */}
-              <svg className="w-32 h-4 mt-6 overflow-visible" viewBox="0 0 100 20">
+              <svg className="w-32 h-4 mt-8 overflow-visible drop-shadow-[0_0_10px_rgba(217,164,65,0.5)]" viewBox="0 0 100 20">
                 <path 
                   d="M0 10 Q 50 -5 100 10" 
                   fill="transparent" 
@@ -70,11 +70,11 @@ export function AboutGallerySection() {
               </svg>
             </motion.div>
             
-            <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/70 leading-relaxed max-w-lg">
+            <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
               Kalaiyugam is Impact's celebration of art. The first edition in 2023 brought Tamil Nadu's traditional art forms to center stage: the beat of the parai, the rhythm of tharai thappattai.
             </motion.p>
             
-            <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/70 leading-relaxed max-w-lg">
+            <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
               In 2026, Kalaiyugam returns as Symphony of Emotions — two days where every event, every workshop, every performance comes back to one thing: how art lets us feel, express, and be heard.
             </motion.p>
           </motion.div>

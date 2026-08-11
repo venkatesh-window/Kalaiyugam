@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bricolage.variable} ${outfit.variable} antialiased bg-ink text-parchment overflow-x-hidden`}
+        className={`${cormorant.variable} ${inter.variable} antialiased bg-ink text-parchment overflow-x-hidden`}
       >
         {children}
       </body>

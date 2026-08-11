@@ -7,8 +7,8 @@
   --color-kumkum: #A6242E;
   --color-indigo: #332F7A;
   
-  --font-display: var(--font-bricolage), sans-serif;
-  --font-sans: var(--font-outfit), sans-serif;
+  --font-display: var(--font-cormorant), serif;
+  --font-sans: var(--font-inter), sans-serif;
 
   --color-background: var(--color-ink);
   --color-foreground: var(--color-parchment);
@@ -29,4 +29,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
+}
+
+.text-gold-premium {
+  background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #ffecb3 20%,
+      #d4af37 45%,
+      #3a2c0f 50%,
+      #99752d 55%,
+      #ffecb3 80%,
+      #bf953f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
 }
