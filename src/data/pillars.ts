@@ -2,6 +2,7 @@ export type Pillar = {
   name: string;
   instrument: string;
   description: string;
+  image?: string;
 };
 
 export const pillars: Pillar[] = [

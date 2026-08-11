@@ -59,15 +59,15 @@ export function Header() {
           )}
         >
           {/* Logo Lockup */}
-          <Link href="/" className="group flex items-center gap-3 z-50">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-marigold to-orange-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-              <span className="font-display font-black text-sm text-ink tracking-tighter">K26</span>
+          <Link href="/" className="group flex items-center gap-3.5 z-50">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-marigold to-orange-500 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+              <span className="font-display font-black text-base text-ink tracking-tighter">K26</span>
             </div>
-            <div className="flex flex-col">
-              <span className="font-display text-lg sm:text-xl font-bold leading-none tracking-wide text-parchment">
+            <div className="flex flex-col gap-0.5">
+              <span className="font-display text-xl sm:text-2xl font-bold leading-none tracking-wide text-parchment">
                 Kalaiyugam<span className="text-marigold">.</span>
               </span>
-              <span className="text-[0.65rem] uppercase tracking-[0.2em] text-parchment/60 font-sans">
+              <span className="text-xs uppercase tracking-[0.2em] text-parchment/60 font-sans">
                 The Celebration of Art
               </span>
             </div>
