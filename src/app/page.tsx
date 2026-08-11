@@ -15,15 +15,17 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* HERO SECTION */}
-        <section className="relative h-screen flex flex-col items-center justify-center pt-24 px-6">
+        <section className="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden pb-16 md:pb-32">
           <HeroVideo />
-          
-          <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto space-y-12 mt-12">
-            <h1 className="font-display text-5xl md:text-[8rem] leading-[0.9] tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-parchment via-parchment to-parchment/70 drop-shadow-[0_0_30px_rgba(247,243,234,0.15)]">
-              Symphony <span className="text-transparent bg-clip-text bg-gradient-to-r from-marigold via-yellow-400 to-orange-500 italic block mt-2 drop-shadow-[0_0_20px_rgba(217,164,65,0.3)]">of Emotions</span>
-            </h1>
-            
-            <div className="pt-8">
+
+          <div className="relative z-10 flex flex-col items-center text-center max-w-7xl mx-auto w-full">
+            <img
+              src="/logo.png"
+              alt="Kalaiyugam Logo"
+              className="w-full max-w-[1900px] h-auto object-contain drop-shadow-[0_0_40px_rgba(217,164,65,0.6)] animate-in fade-in zoom-in duration-1000"
+            />
+
+            <div className="mt-[-35vw] md:mt-[-30vw] lg:mt-[-25vw] relative z-20">
               <Countdown />
             </div>
           </div>
