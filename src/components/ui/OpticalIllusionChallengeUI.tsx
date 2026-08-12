@@ -268,7 +268,10 @@ export function OpticalIllusionChallengeUI() {
 
         {/* 11. Final CTA */}
         <motion.div variants={item} className="text-center pb-12">
-          <button className="group relative inline-flex items-center justify-center px-10 py-5 font-sans font-semibold tracking-[0.2em] uppercase text-sm bg-marigold text-ink overflow-hidden rounded-full transition-transform hover:scale-105 active:scale-95">
+          <button 
+            onClick={() => window.open('https://forms.gle/6KJb8CH95Eiaf7pY7', '_blank', 'noopener,noreferrer')}
+            className="group relative inline-flex items-center justify-center px-10 py-5 font-sans font-semibold tracking-[0.2em] uppercase text-sm bg-marigold text-ink overflow-hidden rounded-full transition-transform hover:scale-105 active:scale-95"
+          >
             <span className="relative z-10 flex items-center gap-2">
               Register for the Challenge
               <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />

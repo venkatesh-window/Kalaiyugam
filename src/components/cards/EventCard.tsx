@@ -51,12 +51,26 @@ export function EventCard({ event }: { event: EventSlot }) {
           )}
         </div>
 
-        <div className="flex items-center gap-2 text-marigold font-bold uppercase tracking-[0.18em] text-[11px] max-h-0 overflow-hidden opacity-0 transition-all duration-400 ease-out group-hover:max-h-[30px] group-hover:opacity-100 group-hover:translate-x-1" style={{ transitionDelay: '80ms' }}>
-          <span>View Details</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
+        <div className="flex items-center justify-between w-full max-h-0 overflow-hidden opacity-0 transition-all duration-400 ease-out group-hover:max-h-[40px] group-hover:opacity-100 mt-2" style={{ transitionDelay: '80ms' }}>
+          <div className="flex items-center gap-2 text-marigold font-bold uppercase tracking-[0.18em] text-[11px] group-hover:translate-x-1 transition-transform">
+            <span>View Details</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </div>
+          
+          {event.registerLink && (
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(event.registerLink, '_blank', 'noopener,noreferrer');
+              }}
+              className="pointer-events-auto px-4 py-1.5 bg-marigold text-ink font-bold uppercase tracking-wider text-[10px] rounded-sm hover:bg-parchment transition-colors"
+            >
+              Register
+            </button>
+          )}
         </div>
       </div>
     </Link>
