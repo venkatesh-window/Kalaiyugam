@@ -24,13 +24,12 @@ export default function Home() {
               alt="Kalaiyugam Logo"
               className="w-full max-w-[1900px] h-auto object-contain drop-shadow-[0_0_40px_rgba(217,164,65,0.6)] animate-in fade-in zoom-in duration-1000"
             />
-
-            <div className="mt-[-55vw] sm:mt-[-50vw] md:mt-[-42vw] lg:mt-[-35vw] xl:mt-[-30vw] relative z-20">
-              <Countdown />
-            </div>
           </div>
 
-
+          {/* Absolute positioning keeps the countdown fixed relative to the screen bottom */}
+          <div className="absolute bottom-20 md:bottom-24 lg:bottom-32 left-1/2 -translate-x-1/2 z-20 w-full flex justify-center scale-90 sm:scale-100">
+            <Countdown />
+          </div>
         </section>
 
         <AboutGallerySection />
