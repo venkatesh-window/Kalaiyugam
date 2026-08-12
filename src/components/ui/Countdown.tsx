@@ -126,7 +126,7 @@ const TimeUnit = ({ value, label }: { value: string; label: string }) => {
                                             duration: 0.8,
                                             ease: [0.16, 1, 0.3, 1]
                                         }}
-                                        className="absolute font-bold font-display text-gold-premium tracking-tighter"
+                                        className="absolute font-bold font-sans text-gold-premium tracking-tighter"
                                     >
                                         {digit}
                                     </motion.span>

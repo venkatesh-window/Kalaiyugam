@@ -17,12 +17,10 @@ export const WorkshopDay2: EventSlot[] = [
 ];
 
 export const MainEventDay: EventSlot[] = [
-  { time: "9:00–9:45 AM", event: "Inauguration", venue: "Parthasarathy Auditorium", movement: "Opening" },
-  { time: "10:00 AM–12:00 PM", event: "Emotion Auction", venue: "Parthasarathy Auditorium", movement: "Value" },
-  { time: "10:00 AM–12:00 PM", event: "Degrees of Emotion", venue: "Classroom", movement: "Intensity" },
-  { time: "10:00 AM–12:00 PM", event: "Speed Networking", venue: "Classroom", movement: "Belonging" },
-  { time: "10:00 AM–12:00 PM", event: "Hear Me Out", venue: "Lab 1", movement: "Vulnerability" },
-  { time: "10:00 AM–12:00 PM", event: "Emotional Damage", venue: "Lab 2", movement: "Catharsis" },
-  { time: "10:00 AM–12:00 PM", event: "Illusion to Intuition", venue: "Lab 3", movement: "Wonder" },
-  { time: "1:00–3:00 PM", event: "Chief Guest Interaction, Winners' Felicitation & Filler Events", venue: "Parthasarathy Auditorium", movement: "Closing" },
+  { time: "10:00 AM - 12:00 PM", event: "Emotion Auction", venue: "Parthasarathy Auditorium", movement: "Value" },
+  { time: "10:00 AM - 12:00 PM", event: "Degrees of Emotion", venue: "Classroom", movement: "Intensity" },
+  { time: "10:00 AM - 12:00 PM", event: "Speed Networking", venue: "Classroom", movement: "Belonging" },
+  { time: "10:00 AM - 12:00 PM", event: "Hear Me Out", venue: "Lab 1", movement: "Vulnerability" },
+  { time: "10:00 AM - 12:00 PM", event: "Emotional damage", venue: "Lab 2", movement: "Catharsis" },
+  { time: "10:00 AM - 12:00 PM", event: "Illusion to Intuition", venue: "Lab 3", movement: "Wonder" },
 ];

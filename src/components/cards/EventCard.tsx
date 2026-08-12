@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { type EventSlot } from "@/data/schedule";
 import { movements } from "@/data/movements";
 import { cn } from "@/lib/utils";
@@ -7,13 +8,17 @@ import { CalendarDays, MapPin } from "lucide-react";
 
 export function EventCard({ event }: { event: EventSlot }) {
   const movementData = event.movement ? movements[event.movement] : null;
+  const slug = event.event.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
   return (
-    <div className="event-card relative rounded-2xl overflow-hidden bg-ink border border-parchment/20 group aspect-[4/5] cursor-pointer">
+    <Link 
+      href={`/event/${slug}`}
+      className="event-card block relative rounded-2xl overflow-hidden bg-ink border border-parchment/20 group aspect-[4/5] cursor-pointer"
+    >
       {/* Optional background gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-transparent z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-transparent z-0 pointer-events-none"></div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
+      <div className="absolute bottom-0 left-0 right-0 z-10 p-6 pointer-events-none">
         <div className="h-[2px] w-12 bg-marigold rounded-full mb-4 transition-all duration-700 ease-out group-hover:w-full"></div>
 
         <h2 className="text-parchment text-[22px] font-bold leading-snug font-display tracking-tight mb-0 transition-all duration-500 group-hover:translate-x-1 group-hover:mb-2 uppercase">
@@ -54,6 +59,6 @@ export function EventCard({ event }: { event: EventSlot }) {
           </svg>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

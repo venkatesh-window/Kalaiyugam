@@ -71,11 +71,15 @@ export function AboutGallerySection() {
             </motion.div>
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
-              Kalaiyugam is Impact's celebration of art. The first edition in 2023 brought Tamil Nadu's traditional art forms to center stage: the beat of the parai, the rhythm of tharai thappattai.
+              Kalaiyugam: A Symphony of Emotions, is a flagship event conducted by Team Impact, the Student Community of Chennai Institute of Technology, to be held on August 20, 2026.
             </motion.p>
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
-              In 2026, Kalaiyugam returns as Symphony of Emotions — two days where every event, every workshop, every performance comes back to one thing: how art lets us feel, express, and be heard.
+              This event aims to celebrate the shared rhythm of life and the uniqueness of human experience through a series of workshops, literary events, and theatrical performances.
+            </motion.p>
+
+            <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
+              It is a time to embrace your emotions through artistic expression, where creativity isn’t measured by time. This multi-event platform allows participants to engage in creative pursuits, interact with seasoned professionals, and explore new dimensions of their talents.
             </motion.p>
           </motion.div>
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,8 +8,10 @@
   --color-kumkum: #A6242E;
   --color-indigo: #332F7A;
   
-  --font-display: var(--font-cormorant), serif;
-  --font-sans: var(--font-inter), sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "Inter", monospace;
+  --font-display: "Cormorant Garamond", serif;
 
   --color-background: var(--color-ink);
   --color-foreground: var(--color-parchment);

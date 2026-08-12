@@ -29,7 +29,7 @@ export default function RegisterPage() {
                 type="email" 
                 id="email" 
                 placeholder="Enter your email" 
-                className="w-full bg-transparent border-b border-parchment/20 pb-2 outline-none focus:border-marigold transition-colors text-parchment placeholder:text-parchment/20 font-mono"
+                className="w-full bg-transparent border-b border-parchment/20 pb-2 outline-none focus:border-marigold transition-colors text-parchment placeholder:text-parchment/20 font-sans"
               />
             </div>
             <button className="w-full py-4 bg-parchment text-ink font-bold uppercase tracking-widest text-sm hover:bg-marigold transition-colors">

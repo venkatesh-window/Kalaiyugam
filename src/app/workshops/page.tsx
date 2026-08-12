@@ -8,14 +8,14 @@ export default function WorkshopsPage() {
     <div className="min-h-screen flex flex-col bg-ink text-parchment selection:bg-marigold selection:text-ink">
       <Header />
 
-      <main className="flex-grow pt-32 pb-24 px-6">
+      <main className="flex-grow pt-48 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <header className="mb-20 max-w-3xl">
-            <h1 className="font-display text-5xl md:text-7xl uppercase tracking-wider mb-6">
-              The <span className="text-marigold italic">Workshops</span>
+          <header className="mb-20 max-w-4xl mx-auto text-center">
+            <h1 className="font-display text-5xl md:text-7xl uppercase tracking-wider mb-6 text-marigold">
+              WORKSHOPS
             </h1>
             <p className="text-xl text-parchment/60 leading-relaxed">
-              August 18–19, 2026. Master the instruments of Impact before the symphony begins.
+              August 18–19, 2026. Master the instruments of Impact before the symphony&nbsp;begins.
             </p>
           </header>
 
