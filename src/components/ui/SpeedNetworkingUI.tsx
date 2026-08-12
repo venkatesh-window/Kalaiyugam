@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { 
-  Sparkles, Users, AlertOctagon, Gavel, Flame
+  Sparkles, Users, AlertOctagon, Gavel, Flame, ShieldAlert
 } from "lucide-react";
 
 export function SpeedNetworkingUI() {
