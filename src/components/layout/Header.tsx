@@ -107,10 +107,10 @@ export function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
-            exit={{ opacity: 0, backdropFilter: "blur(0px)", transition: { delay: 0.2 } }}
-            className="fixed inset-0 z-40 bg-ink/95 flex flex-col items-center justify-center px-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { delay: 0.2 } }}
+            className="fixed inset-0 z-40 bg-ink/98 flex flex-col items-center justify-center px-6 backdrop-blur-md"
           >
             <nav className="flex flex-col items-center gap-8 w-full max-w-sm">
               {navLinks.map((link, i) => {
