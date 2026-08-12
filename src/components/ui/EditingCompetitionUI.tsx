@@ -41,8 +41,8 @@ export function EditingCompetitionUI() {
           </div>
           
           <h1 className="font-display text-5xl md:text-8xl uppercase tracking-widest leading-none mb-6">
-            <span className="block text-transparent bg-clip-text bg-gradient-to-br from-parchment to-parchment/60">Editing</span>
-            <span className="block text-3xl md:text-5xl mt-4 text-indigo tracking-[0.2em]">Competition</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-br from-parchment to-parchment/60">Emotional</span>
+            <span className="block text-3xl md:text-5xl mt-4 text-indigo tracking-[0.2em]">Damage</span>
           </h1>
         </motion.div>
 

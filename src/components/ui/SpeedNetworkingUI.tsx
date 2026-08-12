@@ -41,8 +41,8 @@ export function SpeedNetworkingUI() {
           </div>
           
           <h1 className="font-display text-5xl md:text-8xl uppercase tracking-widest leading-none mb-6">
-            <span className="block text-transparent bg-clip-text bg-gradient-to-br from-parchment to-parchment/60">Kalaiyugam 2.0</span>
-            <span className="block text-3xl md:text-5xl mt-4 text-marigold tracking-[0.2em]">Speed Networking</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-br from-parchment to-parchment/60">Speed</span>
+            <span className="block text-3xl md:text-5xl mt-4 text-marigold tracking-[0.2em]">Networking</span>
           </h1>
         </motion.div>
 
