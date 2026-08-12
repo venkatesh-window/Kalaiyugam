@@ -27,7 +27,8 @@ export const CometCursor = () => {
             navigator.maxTouchPoints > 0;
 
         if (isTouchDevice) {
-            document.querySelector('.custom-cursor')?.remove();
+            // Do NOT remove the DOM node manually, as this crashes React during route changes!
+            // Just return early so the canvas does nothing.
             return;
         }
 
