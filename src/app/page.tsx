@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { HeroVideo } from "@/components/ui/HeroVideo";
 import { Countdown } from "@/components/ui/Countdown";
 import { SponsorsSection } from "@/components/ui/SponsorsSection";
@@ -10,9 +8,7 @@ import { AboutGallerySection } from "@/components/ui/AboutGallerySection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-ink text-parchment selection:bg-marigold selection:text-ink">
-      <Header />
-
+    <div className="min-h-screen flex flex-col selection:bg-marigold selection:text-ink">
       <main className="flex-grow">
         {/* HERO SECTION */}
         <section className="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden pb-16 md:pb-32">
@@ -38,8 +34,6 @@ export default function Home() {
 
         <SponsorsSection />
       </main>
-
-      <Footer />
     </div>
   );
 }

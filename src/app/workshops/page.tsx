@@ -1,13 +1,9 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { EventCard } from "@/components/cards/EventCard";
 import { WorkshopDay1, WorkshopDay2 } from "@/data/schedule";
 
 export default function WorkshopsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-ink text-parchment selection:bg-marigold selection:text-ink">
-      <Header />
-
+    <div className="min-h-screen flex flex-col selection:bg-marigold selection:text-ink">
       <main className="flex-grow pt-48 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           <header className="mb-20 max-w-4xl mx-auto text-center">
@@ -44,8 +40,6 @@ export default function WorkshopsPage() {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

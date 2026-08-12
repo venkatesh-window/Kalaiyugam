@@ -1,13 +1,10 @@
 "use client";
 
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-ink text-parchment selection:bg-marigold selection:text-ink">
-      <Header />
-
+    <div className="min-h-screen flex flex-col selection:bg-marigold selection:text-ink">
       <main className="flex-grow flex items-center justify-center pt-32 pb-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-tr from-kumkum/10 via-ink to-indigo/10 pointer-events-none" />
         
@@ -38,8 +35,6 @@ export default function RegisterPage() {
           </form>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
