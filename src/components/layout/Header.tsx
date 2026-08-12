@@ -126,6 +126,7 @@ export function Header() {
                   >
                     <Link
                       href={link.href}
+                      onClick={() => setIsOpen(false)}
                       className={cn(
                         "block py-4 font-display text-4xl sm:text-5xl uppercase tracking-wider transition-colors border-b border-parchment/10 w-full",
                         isActive ? "text-marigold border-marigold/30" : "text-parchment hover:text-marigold hover:border-marigold/30"
