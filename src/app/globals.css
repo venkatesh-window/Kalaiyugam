@@ -48,3 +48,29 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent;
   filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
 }
+
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.92);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.event-card {
+  animation: cardReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.event-card:hover {
+  box-shadow:
+    0 24px 60px rgba(217, 164, 65, 0.2),
+    0 0 0 1px rgba(217, 164, 65, 0.15);
+  transform: translateY(-8px);
+  transition: all 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  border-color: rgba(217, 164, 65, 0.45);
+}

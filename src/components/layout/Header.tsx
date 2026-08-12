@@ -11,7 +11,6 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events" },
   { name: "Workshops", href: "/workshops" },
-  { name: "Theme", href: "/symphony-of-emotions" }, // Shortened for cleaner UI
 ];
 
 export function Header() {

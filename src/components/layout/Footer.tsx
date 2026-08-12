@@ -43,9 +43,6 @@ export function Footer() {
             <li>
               <Link href="/workshops" className="hover:text-marigold transition-colors uppercase tracking-widest text-sm">Workshops</Link>
             </li>
-            <li>
-              <Link href="/symphony-of-emotions" className="hover:text-marigold transition-colors uppercase tracking-widest text-sm">The Theme</Link>
-            </li>
           </ul>
         </div>
 
