@@ -18,7 +18,7 @@ export default function Home() {
         <section className="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden pb-16 md:pb-32">
           <HeroVideo />
 
-          <div className="relative z-10 flex flex-col items-center text-center max-w-7xl mx-auto w-full -mt-12 md:-mt-20 lg:-mt-24">
+          <div className="relative z-10 flex flex-col items-center text-center max-w-7xl mx-auto w-full -mt-12 md:-mt-8 lg:-mt-4">
             <img
               src="/logo.png"
               alt="Kalaiyugam Logo"
