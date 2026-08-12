@@ -30,9 +30,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-            <div className="w-px h-32 bg-gradient-to-b from-marigold to-transparent animate-pulse opacity-50" />
-          </div>
+
         </section>
 
         <AboutGallerySection />

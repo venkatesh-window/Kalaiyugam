@@ -50,20 +50,20 @@ export function Header() {
         )}
       >
         <div 
-          className="max-w-7xl mx-auto flex items-center justify-between px-2"
+          className="w-full flex items-center justify-between px-2"
         >
           {/* Logo Lockup */}
           <Link href="/" className="group flex items-center z-50">
             {/* The user will drop logo.png into the public folder */}
             <img 
-              src="/logo.png" 
-              alt="Kalaiyugam Logo" 
-              className="h-20 md:h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_0_15px_rgba(217,164,65,0.4)]"
+              src="/imp logo.png" 
+              alt="Impact Logo" 
+              className="h-20 md:h-24 w-auto -mt-8 md:-mt-12 object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_0_15px_rgba(217,164,65,0.4)]"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-12 bg-ink/90 backdrop-blur-md border border-marigold/40 rounded-full px-12 py-5 shadow-2xl shadow-marigold/10">
+          <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-12 bg-ink/90 backdrop-blur-md border border-marigold/40 rounded-full px-12 py-5 shadow-2xl shadow-marigold/10">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (

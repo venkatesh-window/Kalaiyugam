@@ -64,12 +64,12 @@ export function MagazineScene({ hovered }: SceneProps) {
           child.rotation.x = THREE.MathUtils.lerp(0, -Math.PI / 4, cycle);
           child.position.y = THREE.MathUtils.lerp(i * 0.1, i * 0.1 + 0.5, cycle);
           child.position.z = THREE.MathUtils.lerp(0, -0.5, cycle);
-          (child.material as THREE.MeshStandardMaterial).opacity = 1 - cycle;
+          ((child as THREE.Mesh).material as THREE.MeshStandardMaterial).opacity = 1 - cycle;
         } else {
           child.rotation.x = 0;
           child.position.y = i * 0.1;
           child.position.z = 0;
-          (child.material as THREE.MeshStandardMaterial).opacity = 1;
+          ((child as THREE.Mesh).material as THREE.MeshStandardMaterial).opacity = 1;
         }
       });
     }

@@ -1,7 +1,22 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { OpticalIllusionChallengeUI } from "@/components/ui/OpticalIllusionChallengeUI";
 
-export default function EventDetailsPage() {
+export default async function EventDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  if (slug === 'optical-illusion-website-challenge' || slug === 'illusion-to-intuition') {
+    return (
+      <div className="min-h-screen flex flex-col bg-ink selection:bg-marigold selection:text-ink">
+        <Header />
+        <main className="flex-grow">
+          <OpticalIllusionChallengeUI />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-ink text-parchment selection:bg-marigold selection:text-ink">
       <Header />
