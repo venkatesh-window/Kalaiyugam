@@ -58,7 +58,7 @@ export function Header() {
             <img 
               src="/imp logo.png" 
               alt="Impact Logo" 
-              className="h-20 md:h-24 w-auto -mt-8 md:-mt-12 object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_0_15px_rgba(217,164,65,0.4)]"
+              className="h-20 md:h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_0_15px_rgba(217,164,65,0.4)]"
             />
           </Link>
 
