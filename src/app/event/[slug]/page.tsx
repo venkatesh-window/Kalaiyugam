@@ -8,6 +8,7 @@ import { MandalaArtWorkshopUI } from "@/components/ui/MandalaArtWorkshopUI";
 import { WritingWorkshopUI } from "@/components/ui/WritingWorkshopUI";
 import { WebWorkshopUI } from "@/components/ui/WebWorkshopUI";
 import { EditingWorkshopUI } from "@/components/ui/EditingWorkshopUI";
+import { PodcastWorkshopUI } from "@/components/ui/PodcastWorkshopUI";
 
 export default async function EventDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -41,6 +42,9 @@ export default async function EventDetailsPage({ params }: { params: Promise<{ s
   }
   if (slug === 'editing-workshop') {
     return <EditingWorkshopUI />;
+  }
+  if (slug === 'podcast-workshop') {
+    return <PodcastWorkshopUI />;
   }
 
   return (

@@ -9,9 +9,7 @@ export function EventCard({ event }: { event: EventSlot }) {
 
   return (
     <Link 
-      href={slug === 'podcast-workshop' && event.registerLink ? event.registerLink : `/event/${slug}`}
-      target={slug === 'podcast-workshop' ? "_blank" : undefined}
-      rel={slug === 'podcast-workshop' ? "noopener noreferrer" : undefined}
+      href={`/event/${slug}`}
       className="event-card block relative rounded-2xl overflow-hidden bg-ink border border-parchment/20 group aspect-[4/5] cursor-pointer"
     >
       {/* Optional background gradient for depth */}
