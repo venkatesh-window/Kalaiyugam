@@ -18,6 +18,7 @@ export const WorkshopDay2: EventSlot[] = [
   { time: "10:00–11:30 AM", event: "Editing Workshop", venue: "Lab 1", movement: "Visual Harmony", registerLink: "https://forms.gle/7vHAeJqnN9wvYjmk7", price: "80" },
 ];
 
+
 export const MainEventDay: EventSlot[] = [
   { time: "10:00 AM - 12:00 PM", event: "Emotion Premier League (EPL)", venue: "Parthasarathy Auditorium", movement: "Value", registerLink: "https://forms.gle/TAKCeniUyERDxYRh6", price: "60" },
   { time: "10:00 AM - 12:00 PM", event: "Degrees of Emotion", venue: "Classroom", movement: "Intensity", registerLink: "https://forms.gle/6AH8BUR6yKbduH78A", price: "60" },
