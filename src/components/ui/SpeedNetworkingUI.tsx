@@ -41,7 +41,7 @@ export function SpeedNetworkingUI() {
               <span>Speed Networking</span>
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs uppercase tracking-widest font-semibold font-mono">
-              <span>Entry Fee: ₹99</span>
+              <span>Entry Fee: ₹60</span>
             </div>
           </div>
           
