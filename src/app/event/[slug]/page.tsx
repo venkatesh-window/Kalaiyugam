@@ -1,71 +1,30 @@
 import { OpticalIllusionChallengeUI } from "@/components/ui/OpticalIllusionChallengeUI";
-import { EmotionalDamageUI } from "@/components/ui/EmotionalDamageUI";
 import { DegreesOfEmotionUI } from "@/components/ui/DegreesOfEmotionUI";
 import { HearMeOutUI } from "@/components/ui/HearMeOutUI";
-import { SpeedNetworkingUI } from "@/components/ui/SpeedNetworkingUI";
+import { EditingCompetitionUI } from "@/components/ui/EditingCompetitionUI";
 import { EmotionPremierLeagueUI } from "@/components/ui/EmotionPremierLeagueUI";
+import { SpeedNetworkingUI } from "@/components/ui/SpeedNetworkingUI";
 
 export default async function EventDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
   if (slug === 'optical-illusion-website-challenge' || slug === 'illusion-to-intuition') {
-    return (
-      <div className="min-h-screen flex flex-col selection:bg-marigold selection:text-ink">
-        <main className="flex-grow">
-          <OpticalIllusionChallengeUI />
-        </main>
-      </div>
-    );
+    return <OpticalIllusionChallengeUI />;
   }
-
-  if (slug === 'emotional-damage') {
-    return (
-      <div className="min-h-screen flex flex-col selection:bg-kumkum selection:text-ink">
-        <main className="flex-grow">
-          <EmotionalDamageUI />
-        </main>
-      </div>
-    );
-  }
-
   if (slug === 'degrees-of-emotion') {
-    return (
-      <div className="min-h-screen flex flex-col selection:bg-kumkum selection:text-ink">
-        <main className="flex-grow">
-          <DegreesOfEmotionUI />
-        </main>
-      </div>
-    );
+    return <DegreesOfEmotionUI />;
   }
-
   if (slug === 'hear-me-out') {
-    return (
-      <div className="min-h-screen flex flex-col selection:bg-parchment selection:text-ink">
-        <main className="flex-grow">
-          <HearMeOutUI />
-        </main>
-      </div>
-    );
+    return <HearMeOutUI />;
   }
-
-  if (slug === 'speed-networking') {
-    return (
-      <div className="min-h-screen flex flex-col selection:bg-marigold selection:text-ink">
-        <main className="flex-grow">
-          <SpeedNetworkingUI />
-        </main>
-      </div>
-    );
+  if (slug === 'editing-competition' || slug === 'emotional-damage') {
+    return <EditingCompetitionUI />;
   }
-
-  if (slug === 'emotion-premier-league-epl') {
-    return (
-      <div className="min-h-screen flex flex-col selection:bg-marigold selection:text-ink">
-        <main className="flex-grow">
-          <EmotionPremierLeagueUI />
-        </main>
-      </div>
-    );
+  if (slug === 'emotion-premier-league' || slug === 'emotion-auction' || slug === 'emotion-premier-league-epl') {
+    return <EmotionPremierLeagueUI />;
+  }
+  if (slug === 'speed-networking' || slug === 'kalaiyugam-2-0-speed-networking') {
+    return <SpeedNetworkingUI />;
   }
 
   return (

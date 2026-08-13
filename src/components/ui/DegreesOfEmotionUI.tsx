@@ -3,8 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { 
-  Drama, Mic, MessageSquare, Flame, 
-  Sparkles, ChevronRight, Activity
+  Sparkles, ChevronRight, PenTool, Drama
 } from "lucide-react";
 
 export function DegreesOfEmotionUI() {
@@ -23,8 +22,6 @@ export function DegreesOfEmotionUI() {
 
   return (
     <div className="w-full min-h-screen bg-ink text-parchment overflow-hidden">
-      
-      {/* Abstract Background Elements */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] bg-kumkum/5 rounded-full blur-[100px]" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-kumkum/5 rounded-full blur-[120px]" />
@@ -36,14 +33,14 @@ export function DegreesOfEmotionUI() {
         initial="hidden"
         animate="show"
       >
-        {/* 1. Event Hero */}
+        {/* Hero */}
         <motion.div variants={item} className="text-center mb-20 relative">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-kumkum/30 bg-kumkum/5 text-kumkum text-xs uppercase tracking-widest font-semibold mb-6">
             <Sparkles size={14} />
-            <span>Intensity Concept</span>
+            <span>Writing Category</span>
           </div>
           
-          <h1 className="font-display text-6xl md:text-8xl uppercase tracking-widest leading-none mb-6">
+          <h1 className="font-display text-5xl md:text-8xl uppercase tracking-widest leading-none mb-6">
             <span className="block text-transparent bg-clip-text bg-gradient-to-br from-parchment to-parchment/60">Degrees of</span>
             <span className="block text-3xl md:text-5xl mt-4 text-kumkum tracking-[0.2em]">Emotion</span>
           </h1>
@@ -51,81 +48,83 @@ export function DegreesOfEmotionUI() {
           <p className="text-xl md:text-2xl font-light text-parchment/70 max-w-2xl mx-auto italic font-display">
             "Can you make us feel without ever saying the word?"
           </p>
-          <p className="mt-4 text-parchment/50 font-sans tracking-wide uppercase text-sm">
-            Join this fun challenge and test your dramatic range.
-          </p>
         </motion.div>
 
-        {/* Challenge Overview */}
+        {/* Overview */}
+        <motion.div variants={item} className="mb-24">
+          <div className="bg-parchment/5 border border-parchment/10 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
+            <h3 className="text-kumkum uppercase tracking-widest text-sm font-semibold mb-4">Overview</h3>
+            <p className="text-lg text-parchment/80 leading-relaxed font-light mb-6">
+              Join this fun challenge and test your dramatic range.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Format */}
         <motion.div variants={item} className="mb-24">
           <div className="flex items-center gap-4 mb-12">
             <div className="h-px bg-kumkum/30 flex-grow" />
-            <h2 className="font-display text-3xl uppercase tracking-widest text-kumkum">The Challenge</h2>
+            <h2 className="font-display text-3xl uppercase tracking-widest text-kumkum">Format</h2>
             <div className="h-px bg-kumkum/30 flex-grow" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+          <div className="relative">
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-parchment/10 -translate-x-1/2 hidden md:block" />
+
             {/* Round 1 */}
-            <div className="bg-parchment/5 border border-parchment/10 rounded-3xl p-8 md:p-10 backdrop-blur-sm relative overflow-hidden group hover:border-kumkum/30 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-kumkum/5 rounded-full blur-[40px] group-hover:bg-kumkum/10 transition-colors" />
-              
-              <div className="flex items-center justify-between mb-8 relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-kumkum/10 text-kumkum text-xs uppercase tracking-widest font-semibold">
-                  Round 1
-                </div>
-                <MessageSquare className="text-kumkum/50" size={24} />
+            <div className="relative flex flex-col md:flex-row gap-8 md:gap-16 mb-16 items-start">
+              <div className="md:w-1/2 md:text-right pt-2 relative z-10">
+                <div className="inline-block px-3 py-1 bg-parchment/10 rounded text-xs uppercase tracking-widest mb-3">Round 1</div>
+                <h3 className="font-display text-4xl mb-2 text-white">The Unspoken Emotion</h3>
+                <p className="text-parchment/70 leading-relaxed font-light mt-4">
+                  Participants receive a mystery emotion. They have 60 seconds to craft and perform a story built around it.
+                </p>
               </div>
-
-              <h3 className="font-display text-3xl text-white mb-4 relative z-10">The Unspoken Emotion</h3>
-              <p className="text-parchment/70 leading-relaxed font-light mb-8 relative z-10">
-                You receive a mystery emotion. You have <strong>60 seconds</strong> to craft and perform a story around it.
-              </p>
-
-              <div className="bg-kumkum/10 border border-kumkum/20 rounded-xl p-5 relative z-10 flex items-start gap-4">
-                <Flame className="text-kumkum shrink-0 mt-1" size={20} />
-                <div>
-                  <h4 className="text-xs uppercase tracking-widest text-kumkum mb-1 font-semibold">The Catch</h4>
-                  <p className="text-sm text-parchment/90">
-                    You are <strong>NOT</strong> allowed to name the emotion.
+              
+              <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-ink border-2 border-kumkum rounded-full -translate-x-1/2 mt-4 md:mt-6 z-20 hidden md:block" />
+              
+              <div className="md:w-1/2 bg-parchment/5 border border-parchment/10 rounded-2xl p-6 backdrop-blur-sm relative z-10">
+                <div className="p-4 bg-kumkum/5 rounded-xl border border-kumkum/20">
+                  <PenTool size={24} className="text-kumkum mb-3" />
+                  <h4 className="text-sm font-semibold text-white mb-2 uppercase tracking-widest">The Catch</h4>
+                  <p className="text-sm text-parchment/80 leading-relaxed">
+                    You are NOT allowed to name the emotion directly in your story.
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Round 2 */}
-            <div className="bg-parchment/5 border border-parchment/10 rounded-3xl p-8 md:p-10 backdrop-blur-sm relative overflow-hidden group hover:border-kumkum/30 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-kumkum/5 rounded-full blur-[40px] group-hover:bg-kumkum/10 transition-colors" />
-              
-              <div className="flex items-center justify-between mb-8 relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-kumkum/10 text-kumkum text-xs uppercase tracking-widest font-semibold">
-                  Round 2
-                </div>
-                <Activity className="text-kumkum/50" size={24} />
+            <div className="relative flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+              <div className="md:w-1/2 md:order-2 pt-2 relative z-10">
+                <div className="inline-block px-3 py-1 bg-parchment/10 rounded text-xs uppercase tracking-widest mb-3">Round 2</div>
+                <h3 className="font-display text-4xl mb-2 text-white">Degrees of Emotion</h3>
+                <p className="text-parchment/70 leading-relaxed font-light mt-4">
+                  Every participant is assigned an intensity level from 1 to 5 (Level 1 = subtle/mild, Level 5 = extreme/overwhelming).
+                </p>
               </div>
 
-              <h3 className="font-display text-3xl text-white mb-4 relative z-10">Degrees of Emotion</h3>
-              <p className="text-parchment/70 leading-relaxed font-light mb-8 relative z-10">
-                Dial the intensity up or down. Every participant gets an assigned intensity level from <strong>1 to 5</strong> (Level 1 = subtle/mild; Level 5 = extreme/overwhelming).
-              </p>
-
-              <div className="bg-kumkum/10 border border-kumkum/20 rounded-xl p-5 relative z-10 flex items-start gap-4">
-                <Drama className="text-kumkum shrink-0 mt-1" size={20} />
-                <div>
-                  <h4 className="text-xs uppercase tracking-widest text-kumkum mb-1 font-semibold">The Goal</h4>
-                  <p className="text-sm text-parchment/90">
-                    Perform or write a quick scene that accurately hits your exact level on the emotional spectrum. Can you pull off subtle grief just as well as full-blown hysteria?
+              <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-ink border-2 border-kumkum rounded-full -translate-x-1/2 mt-4 md:mt-6 z-20 hidden md:block" />
+              
+              <div className="md:w-1/2 md:order-1 bg-parchment/5 border border-parchment/10 rounded-2xl p-6 backdrop-blur-sm relative z-10 md:text-right">
+                <div className="p-4 bg-kumkum/5 rounded-xl border border-kumkum/20">
+                  <Drama size={24} className="text-kumkum mb-3 md:ml-auto" />
+                  <h4 className="text-sm font-semibold text-white mb-2 uppercase tracking-widest">The Goal</h4>
+                  <p className="text-sm text-parchment/80 leading-relaxed">
+                    Perform or write a quick scene that accurately hits your exact level on the emotional spectrum (e.g. subtle grief vs. full-blown hysteria).
                   </p>
                 </div>
               </div>
             </div>
-
           </div>
         </motion.div>
 
         {/* Final CTA */}
         <motion.div variants={item} className="text-center pb-12">
-          <button className="group relative inline-flex items-center justify-center px-10 py-5 font-sans font-semibold tracking-[0.2em] uppercase text-sm bg-kumkum text-ink overflow-hidden rounded-full transition-transform hover:scale-105 active:scale-95">
+          <button 
+            onClick={() => window.open('https://forms.gle/6AH8BUR6yKbduH78A', '_blank', 'noopener,noreferrer')}
+            className="group relative inline-flex items-center justify-center px-10 py-5 font-sans font-semibold tracking-[0.2em] uppercase text-sm bg-kumkum text-parchment overflow-hidden rounded-full transition-transform hover:scale-105 active:scale-95"
+          >
             <span className="relative z-10 flex items-center gap-2">
               Register for the Challenge
               <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
