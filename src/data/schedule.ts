@@ -9,13 +9,13 @@ export type EventSlot = {
 };
 
 export const WorkshopDay1: EventSlot[] = [
-  { time: "10:00–11:30 AM", event: "Web Workshop", venue: "Lab 1", movement: "Resonance", registerLink: "https://forms.gle/3ZFm2dhYGeyg3nHu5", price: "80" },
-  { time: "10:00–11:30 AM", event: "Writing Workshop", venue: "Classroom", movement: "The Written Verse", registerLink: "https://forms.gle/jUQF5BPU6ptzJ9sc9", price: "80" },
+  { time: "10:00–11:30 AM", event: "Web Workshop", venue: "Lab 1", movement: "Resonance", registerLink: "https://forms.gle/3ZFm2dhYGeyg3nHu5", price: "80", image: "/web workshop poster.jpg" },
+  { time: "10:00–11:30 AM", event: "Writing Workshop", venue: "Classroom", movement: "The Written Verse", registerLink: "https://forms.gle/jUQF5BPU6ptzJ9sc9", price: "80", image: "/writing workshop poster.jpg" },
 ];
 
 export const WorkshopDay2: EventSlot[] = [
   { time: "10:00–11:30 AM", event: "Podcast Workshop", venue: "Kaveri Auditorium / Partha Auditorium", movement: "Voice", registerLink: "https://forms.gle/Qcm13nVnvZg5RT1Q6", price: "80", image: "/podcast.jpeg" },
-  { time: "10:00–11:30 AM", event: "Mandala Art Workshop", venue: "Classroom", movement: "Visual Harmony", registerLink: "https://forms.gle/7vWYxFvwkqNphmcr9", price: "500" },
+  { time: "10:00–11:30 AM", event: "Mandala Art Workshop", venue: "Classroom", movement: "Visual Harmony", registerLink: "https://forms.gle/7vWYxFvwkqNphmcr9", price: "500", image: "/mandala art workshop poster.jpg" },
   { time: "10:00–11:30 AM", event: "Editing Workshop", venue: "Lab 1", movement: "Visual Harmony", registerLink: "https://forms.gle/7vHAeJqnN9wvYjmk7", price: "80", image: "/editing.jpeg" },
 ];
 
