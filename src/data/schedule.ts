@@ -17,7 +17,7 @@ export const WorkshopDay2: EventSlot[] = [
 ];
 
 export const MainEventDay: EventSlot[] = [
-  { time: "10:00 AM - 12:00 PM", event: "Emotion Auction", venue: "Parthasarathy Auditorium", movement: "Value" },
+  { time: "10:00 AM - 12:00 PM", event: "Emotion Premier League (EPL)", venue: "Parthasarathy Auditorium", movement: "Value" },
   { time: "10:00 AM - 12:00 PM", event: "Degrees of Emotion", venue: "Classroom", movement: "Intensity" },
   { time: "10:00 AM - 12:00 PM", event: "Speed Networking", venue: "Classroom", movement: "Belonging" },
   { time: "10:00 AM - 12:00 PM", event: "Hear Me Out", venue: "Lab 1", movement: "Vulnerability" },
