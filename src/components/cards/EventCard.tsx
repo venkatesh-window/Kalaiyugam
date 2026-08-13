@@ -12,6 +12,15 @@ export function EventCard({ event }: { event: EventSlot }) {
       href={`/event/${slug}`}
       className="event-card block relative rounded-2xl overflow-hidden bg-ink border border-parchment/20 group aspect-[4/5] cursor-pointer"
     >
+      {event.image ? (
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
+          style={{ backgroundImage: `url('${event.image}')` }}
+        />
+      ) : (
+        <div className="absolute inset-0 bg-parchment/5" />
+      )}
+      
       {/* Optional background gradient for depth */}
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-transparent z-0 pointer-events-none"></div>
 
