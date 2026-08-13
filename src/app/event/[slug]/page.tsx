@@ -4,6 +4,10 @@ import { HearMeOutUI } from "@/components/ui/HearMeOutUI";
 import { EditingCompetitionUI } from "@/components/ui/EditingCompetitionUI";
 import { EmotionPremierLeagueUI } from "@/components/ui/EmotionPremierLeagueUI";
 import { SpeedNetworkingUI } from "@/components/ui/SpeedNetworkingUI";
+import { MandalaArtWorkshopUI } from "@/components/ui/MandalaArtWorkshopUI";
+import { WritingWorkshopUI } from "@/components/ui/WritingWorkshopUI";
+import { WebWorkshopUI } from "@/components/ui/WebWorkshopUI";
+import { EditingWorkshopUI } from "@/components/ui/EditingWorkshopUI";
 
 export default async function EventDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -25,6 +29,18 @@ export default async function EventDetailsPage({ params }: { params: Promise<{ s
   }
   if (slug === 'speed-networking' || slug === 'kalaiyugam-2-0-speed-networking') {
     return <SpeedNetworkingUI />;
+  }
+  if (slug === 'mandala-art-workshop') {
+    return <MandalaArtWorkshopUI />;
+  }
+  if (slug === 'writing-workshop') {
+    return <WritingWorkshopUI />;
+  }
+  if (slug === 'web-workshop') {
+    return <WebWorkshopUI />;
+  }
+  if (slug === 'editing-workshop') {
+    return <EditingWorkshopUI />;
   }
 
   return (
