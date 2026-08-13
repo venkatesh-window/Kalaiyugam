@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -43,10 +43,16 @@ export function GalleryTile({ title, src, aspectRatio = "aspect-[3/4]", onClick,
     mouseY.set(0.5);
   };
 
-  // Randomized Ken Burns start position for variety
-  const kenBurnsStyle = src ? {
-    transformOrigin: `${Math.random() * 100}% ${Math.random() * 100}%`
-  } : {};
+  const [transformOrigin, setTransformOrigin] = useState("50% 50%");
+
+  // Fix Next.js hydration mismatch by setting random values only on client
+  useEffect(() => {
+    if (src) {
+      setTransformOrigin(`${Math.random() * 100}% ${Math.random() * 100}%`);
+    }
+  }, [src]);
+
+  const kenBurnsStyle = src ? { transformOrigin } : {};
 
   return (
     <motion.div
@@ -90,19 +96,7 @@ export function GalleryTile({ title, src, aspectRatio = "aspect-[3/4]", onClick,
       <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-marigold opacity-0 -translate-x-2 -translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 z-10" />
       <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-marigold opacity-0 translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 z-10" />
 
-      {/* Caption Scrim */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink/90 to-transparent z-10" />
 
-      {/* Placard Caption */}
-      <div 
-        className="absolute bottom-6 left-6 right-6 z-20 flex flex-col items-start"
-        style={{ transform: "translateZ(20px)" }}
-      >
-        <div className="w-8 h-px bg-marigold mb-3" />
-        <span className="text-xs uppercase tracking-[0.25em] text-parchment font-medium drop-shadow-md">
-          {title}
-        </span>
-      </div>
     </motion.div>
   );
 }

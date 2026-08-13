@@ -28,7 +28,7 @@ export function Footer() {
                 Kalaiyugam<sup className="text-2xl ml-1 text-marigold">26</sup>
               </span>
               <span className="text-sm uppercase tracking-[0.3em] text-marigold font-medium">
-                The Celebration of Art
+                Symphony of Emotions
               </span>
             </Link>
             

@@ -6,15 +6,15 @@ import { GalleryTile } from "./GalleryTile";
 import { X } from "lucide-react";
 
 const galleryData = [
-  { id: "g1", title: "2023", aspectRatio: "aspect-[3/4]" },
-  { id: "g2", title: "Stage", aspectRatio: "aspect-square" },
-  { id: "g3", title: "Parai", aspectRatio: "aspect-square" },
-  { id: "g4", title: "Performance", aspectRatio: "aspect-[3/4]" },
+  { id: "g1", title: "Gallery Image 1", aspectRatio: "aspect-[4/5]", src: "/img1.jpeg" },
+  { id: "g2", title: "Gallery Image 2", aspectRatio: "aspect-square", src: "/img2.jpeg" },
+  { id: "g3", title: "Gallery Image 3", aspectRatio: "aspect-square", src: "/img3.jpeg" },
+  { id: "g4", title: "Gallery Image 4", aspectRatio: "aspect-[4/5]", src: "/img4.jpeg" },
 ];
 
 export function AboutGallerySection() {
   const containerRef = useRef<HTMLElement>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{title: string, src?: string} | null>(null);
 
   // Parallax setup
   const { scrollYProgress } = useScroll({
@@ -94,14 +94,16 @@ export function AboutGallerySection() {
                 <GalleryTile 
                   title={galleryData[0].title} 
                   aspectRatio={galleryData[0].aspectRatio} 
-                  onClick={() => setSelectedImage(galleryData[0].title)}
+                  src={galleryData[0].src}
+                  onClick={() => setSelectedImage(galleryData[0])}
                 />
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
                 <GalleryTile 
                   title={galleryData[2].title} 
                   aspectRatio={galleryData[2].aspectRatio} 
-                  onClick={() => setSelectedImage(galleryData[2].title)}
+                  src={galleryData[2].src}
+                  onClick={() => setSelectedImage(galleryData[2])}
                 />
               </motion.div>
             </motion.div>
@@ -115,14 +117,16 @@ export function AboutGallerySection() {
                 <GalleryTile 
                   title={galleryData[1].title} 
                   aspectRatio={galleryData[1].aspectRatio} 
-                  onClick={() => setSelectedImage(galleryData[1].title)}
+                  src={galleryData[1].src}
+                  onClick={() => setSelectedImage(galleryData[1])}
                 />
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
                 <GalleryTile 
                   title={galleryData[3].title} 
                   aspectRatio={galleryData[3].aspectRatio} 
-                  onClick={() => setSelectedImage(galleryData[3].title)}
+                  src={galleryData[3].src}
+                  onClick={() => setSelectedImage(galleryData[3])}
                 />
               </motion.div>
             </motion.div>
@@ -153,19 +157,21 @@ export function AboutGallerySection() {
               className="relative max-w-5xl w-full aspect-[4/3] bg-parchment/5 rounded-lg overflow-hidden shadow-2xl"
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image block itself
             >
-              {/* Textured placeholder for lightbox */}
-              <div 
-                className="w-full h-full"
-                style={{
-                  backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(247, 243, 234, 0.05) 10px, rgba(247, 243, 234, 0.05) 11px)"
-                }}
-              />
-              <div className="absolute bottom-8 left-8">
-                <div className="w-12 h-px bg-marigold mb-4" />
-                <span className="text-sm uppercase tracking-[0.3em] text-parchment font-medium drop-shadow-lg">
-                  {selectedImage}
-                </span>
-              </div>
+              {selectedImage.src ? (
+                <img 
+                  src={selectedImage.src} 
+                  alt={selectedImage.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div 
+                  className="w-full h-full"
+                  style={{
+                    backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(247, 243, 234, 0.05) 10px, rgba(247, 243, 234, 0.05) 11px)"
+                  }}
+                />
+              )}
+
             </motion.div>
           </motion.div>
         )}
