@@ -1,6 +1,5 @@
 import { HeroVideo } from "@/components/ui/HeroVideo";
 import { Countdown } from "@/components/ui/Countdown";
-import { SponsorsSection } from "@/components/ui/SponsorsSection";
 import { pillars } from "@/data/pillars";
 import * as Icons from "@/components/icons/PillarIcons";
 import { InstrumentsSection } from "@/components/ui/InstrumentsSection";
@@ -32,7 +31,6 @@ export default function Home() {
 
         <InstrumentsSection />
 
-        <SponsorsSection />
 
         {/* CONTACT SECTION */}
         <section className="py-20 px-6 relative z-10 border-t border-marigold/20">

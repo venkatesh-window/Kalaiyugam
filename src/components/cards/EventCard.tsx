@@ -2,12 +2,9 @@
 
 import Link from "next/link";
 import { type EventSlot } from "@/data/schedule";
-import { movements } from "@/data/movements";
 import { cn } from "@/lib/utils";
-import { CalendarDays, MapPin } from "lucide-react";
 
 export function EventCard({ event }: { event: EventSlot }) {
-  const movementData = event.movement ? movements[event.movement] : null;
   const slug = event.event.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
   return (
@@ -26,26 +23,10 @@ export function EventCard({ event }: { event: EventSlot }) {
         </h2>
 
         <div className="flex flex-col gap-0 mt-0 mb-0 max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-out group-hover:gap-2 group-hover:mt-2 group-hover:mb-4 group-hover:max-h-[120px] group-hover:opacity-100">
-          <div className="flex items-center gap-2.5 text-parchment/80">
-            <CalendarDays size={16} className="text-marigold shrink-0" />
-            <span className="text-sm font-sans tracking-wide">
-              {event.time}
-            </span>
-          </div>
-
-          {event.venue && (
-            <div className="flex items-center gap-2.5 text-parchment/80">
-              <MapPin size={16} className="text-marigold shrink-0" />
-              <span className="text-sm font-sans tracking-wide truncate">
-                {event.venue}
-              </span>
-            </div>
-          )}
-          
-          {movementData && (
+          {event.price && (
              <div className="flex items-center gap-2.5 mt-1">
-              <span className={cn("text-xs uppercase tracking-widest px-2 py-1 rounded bg-marigold/10 text-marigold", movementData.colorClass)}>
-                {movementData.emotion}
+              <span className="text-xs uppercase tracking-widest px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 font-mono">
+                ₹{event.price}
               </span>
             </div>
           )}

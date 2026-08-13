@@ -71,7 +71,7 @@ export function AboutGallerySection() {
             </motion.div>
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
-              Kalaiyugam: A Symphony of Emotions, is a flagship event conducted by Team Impact, the Student Community of Chennai Institute of Technology, to be held on August 20, 2026.
+              Kalaiyugam: A Symphony of Emotions, is a flagship event conducted by Team Impact, the Student Community of Chennai Institute of Technology, to be held from August 18–20, 2026.
             </motion.p>
             
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-parchment/60 leading-relaxed max-w-lg font-light tracking-wide">
