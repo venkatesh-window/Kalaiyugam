@@ -119,6 +119,18 @@ export function DegreesOfEmotionUI() {
           </div>
         </motion.div>
 
+        {/* Organizer Section Placeholder */}
+        <motion.div variants={item} className="mb-16 flex justify-center">
+          <div className="bg-parchment/5 border border-parchment/10 rounded-2xl p-8 backdrop-blur-sm max-w-md w-full text-center hover:border-marigold/30 transition-colors">
+            <h3 className="text-marigold uppercase tracking-widest text-sm font-semibold mb-4 flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Event Organisers
+            </h3>
+            <p className="text-lg text-parchment/90 font-medium">To Be Announced</p>
+            <p className="text-sm text-parchment/60 mt-2">Contact details will be updated shortly.</p>
+          </div>
+        </motion.div>
+
         {/* Final CTA */}
         <motion.div variants={item} className="text-center pb-12">
           <button 
