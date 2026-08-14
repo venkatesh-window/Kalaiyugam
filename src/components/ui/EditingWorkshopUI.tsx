@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Film, Video, Scissors, Volume2, MonitorPlay } from "lucide-react";
+import { Film, Video, Scissors, Volume2, MonitorPlay, Laptop } from "lucide-react";
 
 export function EditingWorkshopUI() {
   const container = {
@@ -94,6 +94,26 @@ export function EditingWorkshopUI() {
                      <p className="text-sm text-parchment/60">Optimize your final video for various platforms.</p>
                   </div>
                </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Workshop Requirements */}
+        <motion.div variants={item} className="mb-24">
+          <div className="bg-parchment/5 border border-parchment/10 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
+            <h3 className="text-marigold uppercase tracking-widest text-sm font-semibold mb-6 flex items-center gap-2">
+              <Laptop size={18} /> Workshop Requirements
+            </h3>
+            <div className="bg-marigold/10 border border-marigold/20 rounded-xl p-6 flex items-start gap-4">
+              <div className="p-3 bg-marigold/20 rounded-lg text-marigold shrink-0 mt-0.5">
+                <Laptop size={24} />
+              </div>
+              <div>
+                <h4 className="text-parchment font-semibold text-lg mb-1">Bring Your Own Laptop</h4>
+                <p className="text-parchment/80 text-sm leading-relaxed">
+                  Participants must bring their own laptop with video editing software pre-installed for the hands-on session.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

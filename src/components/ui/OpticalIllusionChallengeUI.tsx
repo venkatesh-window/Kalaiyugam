@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   Users, Clock, Code, BrainCircuit, 
-  ShieldAlert, Sparkles, ChevronRight, Zap
+  ShieldAlert, Sparkles, ChevronRight, Zap, Laptop
 } from "lucide-react";
 
 export function OpticalIllusionChallengeUI() {
@@ -88,6 +88,36 @@ export function OpticalIllusionChallengeUI() {
               <div>
                 <p className="text-xs uppercase tracking-widest text-parchment/50 mb-1">Total Duration</p>
                 <p className="text-2xl font-display font-semibold">60 Minutes</p>
+              </div>
+            </div>
+
+            <div className="bg-parchment/5 border border-parchment/10 rounded-2xl p-6 backdrop-blur-sm flex items-start gap-4 hover:bg-parchment/10 transition-colors">
+              <div className="p-3 bg-marigold/10 rounded-lg text-marigold shrink-0">
+                <Laptop size={24} />
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-widest text-parchment/50 mb-1">Requirement</p>
+                <p className="text-xl font-display font-semibold">Bring Your Own Laptop</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Requirements Section */}
+        <motion.div variants={item} className="mb-24">
+          <div className="bg-parchment/5 border border-parchment/10 rounded-2xl p-8 md:p-10 backdrop-blur-sm">
+            <h3 className="text-marigold uppercase tracking-widest text-sm font-semibold mb-6 flex items-center gap-2">
+              <Laptop size={18} /> Event Requirements
+            </h3>
+            <div className="bg-marigold/10 border border-marigold/20 rounded-xl p-6 flex items-start gap-4">
+              <div className="p-3 bg-marigold/20 rounded-lg text-marigold shrink-0 mt-0.5">
+                <Laptop size={24} />
+              </div>
+              <div>
+                <h4 className="text-parchment font-semibold text-lg mb-1">Bring Your Own Laptop</h4>
+                <p className="text-parchment/80 text-sm leading-relaxed">
+                  Participants must bring their own laptops with standard web development tools and browser pre-installed for the competition.
+                </p>
               </div>
             </div>
           </div>
