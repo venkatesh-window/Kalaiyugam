@@ -34,7 +34,7 @@ const PillarBlock = ({ pillar, index }: { pillar: any, index: number }) => {
         
         {pillar.image ? (
           <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] group-hover:scale-110"
+            className={`absolute inset-0 bg-cover ${pillar.bgPosition || 'bg-center'} transition-transform duration-[10s] group-hover:scale-110`}
             style={{ backgroundImage: `url(${pillar.image})` }}
           />
         ) : (
