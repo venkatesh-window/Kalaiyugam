@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Globe, Zap, Timer, Server, Layers } from "lucide-react";
+import { Code, Globe, Zap, Timer, Server, Layers, Users } from "lucide-react";
 
 export function WebWorkshopUI() {
   const container = {
@@ -179,6 +179,30 @@ export function WebWorkshopUI() {
                 </div>
              </div>
            </div>
+        </motion.div>
+
+        {/* Event Organisers */}
+        <motion.div variants={item} className="mb-16 flex justify-center">
+          <div className="bg-parchment/5 border border-parchment/10 rounded-2xl p-8 backdrop-blur-sm max-w-md w-full text-center hover:border-marigold/30 transition-colors">
+            <h3 className="text-marigold uppercase tracking-widest text-sm font-semibold mb-4 flex items-center justify-center gap-2">
+              <Users size={18} />
+              Event Organisers
+            </h3>
+            <div className="flex flex-col gap-3 mt-4">
+              <div className="flex items-center justify-between px-4 py-2 bg-parchment/5 rounded-lg">
+                <span className="text-parchment/90 font-medium">Sanjith</span>
+                <span className="text-marigold/80 font-mono text-sm">94454 85980</span>
+              </div>
+              <div className="flex items-center justify-between px-4 py-2 bg-parchment/5 rounded-lg">
+                <span className="text-parchment/90 font-medium">Aldrin</span>
+                <span className="text-marigold/80 font-mono text-sm">88078 36935</span>
+              </div>
+              <div className="flex items-center justify-between px-4 py-2 bg-parchment/5 rounded-lg">
+                <span className="text-parchment/90 font-medium">Venkatesh</span>
+                <span className="text-marigold/80 font-mono text-sm">88380 77893</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Final CTA */}
