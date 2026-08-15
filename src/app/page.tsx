@@ -4,6 +4,7 @@ import { pillars } from "@/data/pillars";
 import * as Icons from "@/components/icons/PillarIcons";
 import { InstrumentsSection } from "@/components/ui/InstrumentsSection";
 import { AboutGallerySection } from "@/components/ui/AboutGallerySection";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,6 +29,31 @@ export default function Home() {
         </section>
 
         <AboutGallerySection />
+
+        {/* REGISTRATION LINKS SECTION */}
+        <section className="py-12 px-6 relative z-10 flex flex-col items-center justify-center gap-6 sm:flex-row max-w-6xl mx-auto">
+          <Link 
+            href="/events" 
+            className="w-full sm:w-1/2 group relative overflow-hidden rounded-2xl bg-marigold hover:bg-marigold/90 transition-all duration-300 shadow-[0_0_20px_rgba(217,164,65,0.3)] hover:shadow-[0_0_30px_rgba(217,164,65,0.5)]"
+          >
+            <div className="relative px-8 py-8 md:py-10 flex flex-col items-center justify-center text-center">
+              <span className="text-2xl md:text-3xl font-serif text-ink uppercase tracking-widest group-hover:scale-105 transition-transform duration-500 font-bold">
+                Event Registration
+              </span>
+            </div>
+          </Link>
+
+          <Link 
+            href="/workshops" 
+            className="w-full sm:w-1/2 group relative overflow-hidden rounded-2xl bg-marigold hover:bg-marigold/90 transition-all duration-300 shadow-[0_0_20px_rgba(217,164,65,0.3)] hover:shadow-[0_0_30px_rgba(217,164,65,0.5)]"
+          >
+            <div className="relative px-8 py-8 md:py-10 flex flex-col items-center justify-center text-center">
+              <span className="text-2xl md:text-3xl font-serif text-ink uppercase tracking-widest group-hover:scale-105 transition-transform duration-500 font-bold">
+                Workshop Registration
+              </span>
+            </div>
+          </Link>
+        </section>
 
         <InstrumentsSection />
 
