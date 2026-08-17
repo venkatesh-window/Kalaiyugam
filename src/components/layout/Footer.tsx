@@ -33,7 +33,7 @@ export function Footer() {
             </Link>
             
             <p className="text-parchment/60 max-w-md text-lg leading-relaxed font-light mb-10">
-              Kalaiyugam is the flagship event of Impact, the professional club of Chennai Institute of Technology. A three-day celebration where tradition meets expression, built by the six pillars of Impact.
+              Kalaiyugam is the flagship event of Impact, the professional club of Chennai Institute of Technology. A two-day celebration where tradition meets expression, built by the six pillars of Impact.
             </p>
             
             {/* Pillars Tags */}
