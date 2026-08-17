@@ -11,7 +11,7 @@ export default function EventsPage() {
               EVENTS
             </h1>
             <p className="text-xl text-parchment/60 leading-relaxed">
-              August 20, 2026. The symphony of emotions reaches its crescendo.
+              August 19, 2026. The symphony of emotions reaches its crescendo.
             </p>
           </header>
 

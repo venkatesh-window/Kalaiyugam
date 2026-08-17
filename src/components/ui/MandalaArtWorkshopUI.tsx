@@ -67,7 +67,7 @@ export function MandalaArtWorkshopUI() {
               </div>
               <div>
                 <p className="text-sm text-parchment/50 uppercase tracking-wider">Date</p>
-                <p className="font-semibold text-parchment">August 19</p>
+                <p className="font-semibold text-parchment">August 18</p>
               </div>
             </div>
             <div className="flex items-center gap-4">

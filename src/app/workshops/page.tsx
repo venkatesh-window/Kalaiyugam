@@ -1,5 +1,5 @@
 import { EventCard } from "@/components/cards/EventCard";
-import { WorkshopDay1, WorkshopDay2 } from "@/data/schedule";
+import { Workshops } from "@/data/schedule";
 
 export default function WorkshopsPage() {
   return (
@@ -11,29 +11,18 @@ export default function WorkshopsPage() {
               WORKSHOPS
             </h1>
             <p className="text-xl text-parchment/60 leading-relaxed">
-              August 18–19, 2026. Master the instruments of Impact before the symphony&nbsp;begins.
+              August 18, 2026. Master the instruments of Impact before the symphony&nbsp;begins.
             </p>
           </header>
 
           <div className="space-y-24">
             <section>
               <h2 className="font-display text-3xl uppercase tracking-widest text-parchment/80 mb-8 border-b border-parchment/10 pb-4">
-                Day 1 — August 18
+                August 18
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {WorkshopDay1.map((event, i) => (
-                  <EventCard key={`d1-${event.event}-${i}`} event={event} />
-                ))}
-              </div>
-            </section>
-
-            <section>
-              <h2 className="font-display text-3xl uppercase tracking-widest text-parchment/80 mb-8 border-b border-parchment/10 pb-4">
-                Day 2 — August 19
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {WorkshopDay2.map((event, i) => (
-                  <EventCard key={`d2-${event.event}-${i}`} event={event} />
+                {Workshops.map((event, i) => (
+                  <EventCard key={`workshop-${event.event}-${i}`} event={event} />
                 ))}
               </div>
             </section>

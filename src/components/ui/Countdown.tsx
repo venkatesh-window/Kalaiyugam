@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function Countdown({ className }: { className?: string }) {
-    // Target Date: August 20, 2026 09:00:00 IST
-    const targetDate = useMemo(() => new Date("2026-08-20T09:00:00+05:30").getTime(), []);
+    // Target Date: August 18, 2026 09:00:00 IST
+    const targetDate = useMemo(() => new Date("2026-08-18T09:00:00+05:30").getTime(), []);
 
     const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number; seconds: number }>({
         days: 0,
